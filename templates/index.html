@@ -13,16 +13,16 @@ $:render.header()
                             $ status = ''
                         <li $:status>
                             $if todo.finished == 0:
-                                $todo.title
+                                <doing>$todo.title</doing>
                                 &nbsp;
-                                <a href="/todo/$todo.id/finish?status=yes">已到达</a>,
+                                <a href="/todo/$todo.id/finish?status=yes">标记为已到达</a>,
                             $if todo.finished == 1:
                                 <!--
                                 <del>$todo.title</del>
                                 -->
                                 <camed>$todo.title</camed>
                                 &nbsp;
-                                <a href="/todo/$todo.id/finish?status=no">恢复</a>,
+                                <a href="/todo/$todo.id/finish?status=no">重置</a>,
                             <a href="/todo/$todo.id/edit">修改</a>,
                             <a href="/todo/$todo.id/delete" onclick="return confirm('删除以后不能恢复的，确定？')">删除</a>
                         </li>
