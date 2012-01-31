@@ -18,7 +18,7 @@ $:render.header()
                                 <doing>$todo.title</doing>
                                 &nbsp;
                                 <a href="/todo/$todo.id/finish?status=yes">签到</a>,
-                            $if todo.finished == 1:
+                            $if todo.finished == 1 and todo.moneyed == 0:
                                 <!--
                                 <del>$todo.title</del>
                                 -->
@@ -26,6 +26,11 @@ $:render.header()
                                 <camed>$todo.title</camed>
                                 &nbsp;
                                 <a href="/todo/$todo.id/money?status=yes">交钱啦</a>,
+                                <a href="/todo/$todo.id/finish?status=no">重置</a>,
+                            $if todo.finished == 1 and todo.moneyed == 1:
+                                <moneyed>$todo.title</moneyed>
+                                &nbsp;
+                                <a href="/todo/$todo.id/money?status=no">reset money</a>,
                                 <a href="/todo/$todo.id/finish?status=no">重置</a>,
                             <a href="/todo/$todo.id/edit">修改</a>,
                             <a href="/todo/$todo.id/delete" onclick="return confirm('删除以后不能恢复的，确定？')">删除</a>
