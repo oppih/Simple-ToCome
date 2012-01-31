@@ -92,5 +92,5 @@ class Delete:
 class Index:
 
     def GET(self):
-        todos = db.select(tb, order='finished asc, id asc')
+        todos = db.select(tb, order='moneyed asc, id asc')
         return render.index(todos)
