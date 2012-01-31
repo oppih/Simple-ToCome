@@ -5,7 +5,8 @@ $:render.header()
 
             <div class="box todos">
                 <h2 class="box">待到场人员 </h2>
-                    $ sumofcoming = len(todos) - 1
+                <h3>范例 ￥100 -> 选择“修改”标注金额，选择“签到”表示已到达现场</h3><br>
+                    $ sumofcoming = len(todos)
                     $ remainofcoming = 0
                 <ul>    
                     $for todo in todos:
@@ -30,7 +31,7 @@ $:render.header()
                             <a href="/todo/$todo.id/delete" onclick="return confirm('删除以后不能恢复的，确定？')">删除</a>
                         </li>
                 </ul>
-                <h2 class="box">$remainofcoming / $sumofcoming</h2>
+                <h2 class="box">到达人数：$remainofcoming / $sumofcoming</h2>
 
             </div>
 
