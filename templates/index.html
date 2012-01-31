@@ -4,8 +4,10 @@ $:render.header()
         <div class="box">
 
             <div class="box todos">
-                <h2 class="box">待到场人员</h2>
-                <ul>
+                <h2 class="box">待到场人员 </h2>
+                    $ sumofcoming = len(todos) - 1
+                    $ remainofcoming = 0
+                <ul>    
                     $for todo in todos:
                         $if todo.finished == 1:
                             $ status = 'class="finished"'
@@ -20,6 +22,7 @@ $:render.header()
                                 <!--
                                 <del>$todo.title</del>
                                 -->
+                                $ remainofcoming += 1
                                 <camed>$todo.title</camed>
                                 &nbsp;
                                 <a href="/todo/$todo.id/finish?status=no">重置</a>,
@@ -27,6 +30,8 @@ $:render.header()
                             <a href="/todo/$todo.id/delete" onclick="return confirm('删除以后不能恢复的，确定？')">删除</a>
                         </li>
                 </ul>
+                <h2 class="box">$remainofcoming / $sumofcoming</h2>
+
             </div>
 
             <div class="box post">
