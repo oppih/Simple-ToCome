@@ -40,6 +40,7 @@ a:hover { color:#FF3300; }
                 .todos ul li doing { padding-left:15px; background:url(images/doing.gif) no-repeat left center; }
                 .todos ul li del { padding-left:15px; background:url(images/ok.gif) no-repeat left center; }
                 .todos ul li camed { padding-left:15px; background:url(images/ok.gif) no-repeat left center; }
+                .todos ul li moneyed { padding-left:15px; background:url(images/money.gif) no-repeat left center; }
 
             .post {  }
                 .post p { margin-bottom:10px; }
