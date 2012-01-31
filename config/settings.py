@@ -10,7 +10,7 @@ web.config.debug = True
 
 config = web.storage(
     email='letwego28@gmail.com',
-    site_name = '聚餐到场人员跟踪',
+    site_name = '聚餐签到表',
     site_desc = '',
     static = '/static',
 )

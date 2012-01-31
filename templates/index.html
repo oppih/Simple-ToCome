@@ -15,7 +15,7 @@ $:render.header()
                             $if todo.finished == 0:
                                 <doing>$todo.title</doing>
                                 &nbsp;
-                                <a href="/todo/$todo.id/finish?status=yes">标记为已到达</a>,
+                                <a href="/todo/$todo.id/finish?status=yes">签到</a>,
                             $if todo.finished == 1:
                                 <!--
                                 <del>$todo.title</del>
