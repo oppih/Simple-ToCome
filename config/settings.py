@@ -2,7 +2,7 @@
 # coding: utf-8
 import web
 
-db = web.database(dbn='mysql', db='todo', user='root', pw='')
+db = web.database(dbn='mysql', db='tocome', user='root', pw='')
 
 render = web.template.render('templates/', cache=False)
 
