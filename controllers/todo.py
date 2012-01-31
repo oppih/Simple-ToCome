@@ -6,7 +6,7 @@ from datetime import datetime
 
 render = settings.render
 db = settings.db
-tb = 'todo'
+tb = 'tocome'
 
 def get_by_id(id):
     s = db.select(tb, where='id=$id', vars=locals())
@@ -43,6 +43,22 @@ class Finish:
         db.update(tb, finished=finished, where='id=$id', vars=locals())
         raise web.seeother('/')
 
+class Money:
+
+    def GET(self, id):
+        todo = get_by_id(id)
+        if not todo:
+            return render.error('没找到这条记录', None)
+        i = web.input()
+        status = i.get('status', 'yes')
+        if status == 'yes':
+            moneyed = 1
+        elif status == 'no':
+            moneyed = 0
+        else:
+            return render.error('您发起了一个不允许的请求', '/')
+        db.update(tb, moneyed=moneyed, where='id=$id', vars=locals())
+        raise web.seeother('/')
 
 class Edit:
 
