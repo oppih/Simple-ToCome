@@ -17,8 +17,8 @@ config = web.storage(
     party_place = '就在这里',
     party_people = '象山中学2008届 高三5班',
     party_affair = '吃、喝、聊',
-    party_notes = '默认认为签到的同时也交钱了',
-    party_notes_more = '如果没有带现金过来，请在签到后点击一次 没交钱啦',
+    party_notes = '点击签到后，如果也带现金来的，请拉到最下方再做一次点击 || 为保证数据正确，完成后就不要乱点了',
+    party_notes_more = '（人数统计在最下方）',
 )
 
 
