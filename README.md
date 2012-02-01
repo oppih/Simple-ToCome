@@ -39,4 +39,4 @@ Details can be update in config/settings.py
 聚会信息说明可在 **config/settings.py** 中修改
 
 效果图在此：
-![alt Simple ToCome](./simple_tocome_example.png "Simple ToCome")
+![alt Simple ToCome](https://github.com/oppih/Simple-ToCome/blob/master/simple_tocome_example.png "Simple ToCome")
