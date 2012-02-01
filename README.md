@@ -40,4 +40,4 @@ Details can be update in config/settings.py
 
 效果图在此(如果你clone下代码再在本地使用可视化markdown编辑工具打开就能看到)：
 simple_tocome_example.png
-![alt Simple ToCome](./simple_tocome_example.png "Simple ToCome")
+![alt Simple ToCome](https://github.com/oppih/Simple-ToCome/raw/master/simple_tocome_example.png "Simple ToCome")
