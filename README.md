@@ -18,15 +18,13 @@ Details can be update in config/settings.py
 ## HOW TO DEPLOY (on localhost:8080):
 
 1. Setup your MySQL server properly.
-2. (Use virtualenv to) pip install **mysql-python web.py**
+2. (Use virtualenv to) `pip install **mysql-python web.py**`
 3. Create a database named "tocome" in MySQL and then import the **static/sql/tocome.sql** into your MySQL server :
 
 
-	mysql>CREATE DATABASE tocome;
-
-	exit
-
-	$ mysql -uroot tocome < tocome.sql
+	`mysql>CREATE DATABASE tocome;`  
+	`exit`  
+	`$ mysql -uroot tocome < tocome.sql`
 
 4. Run "python code.py" in your console and visit http://127.0.0.1:8080 .
 
@@ -41,3 +39,4 @@ Details can be update in config/settings.py
 聚会信息说明可在 **config/settings.py** 中修改
 
 效果图在此：
+![alt Simple ToCome](./simple_tocome_example.png "Simple ToCome")
