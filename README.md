@@ -38,5 +38,6 @@ Details can be update in config/settings.py
 
 聚会信息说明可在 **config/settings.py** 中修改
 
-效果图在此：
+效果图在此(如果你clone下代码再在本地使用可视化markdown编辑工具打开就能看到)：
+simple_tocome_example.png
 ![alt Simple ToCome](./simple_tocome_example.png "Simple ToCome")
