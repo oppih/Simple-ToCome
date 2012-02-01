@@ -7,6 +7,7 @@ $:render.header()
                 <h3>$config.party_notes_more</h3><br>
                     $ sumofcoming = len(todos)
                     $ remainofcoming = 0
+                    $ moneyedpeople = 0
                 <ul>    
                     $for todo in todos:
                         $if todo.finished == 1:
@@ -29,6 +30,7 @@ $:render.header()
                                 <a href="/todo/$todo.id/finish?status=no">重置</a>,
                             $if todo.finished == 1 and todo.moneyed == 1:
                                 $ remainofcoming += 1
+                                $ moneyedpeople += 1
                                 <moneyed>$todo.title</moneyed>
                                 &nbsp;
                                 <a href="/todo/$todo.id/money?status=no">没交钱的同学点我哦</a>,
@@ -38,6 +40,7 @@ $:render.header()
                         </li>
                 </ul>
                 <h2 class="box">到达人数：$remainofcoming / $sumofcoming</h2>
+                <h2 class="box">交钱人数：$moneyedpeople / $sumofcoming</h2>
 
             </div>
 
